@@ -547,3 +547,48 @@ scp -r user@remote:Desktop demo
 >
 > * 官方网站：https://www/filezilla.cn/download/client
 > * `FileZilla`在传输文件时，使用的是`FTP`协议，而不是`SSH服务`，因此端口号应该设置为`21`
+
+## 2020年2月7日
+
+### 3.3 SSH 高级 （知道）
+
+* 免密码登录
+* 配置别名
+
+> 提示：有关SSH配置信息都保存在用户家目录下的`.ssh`目录下
+
+#### 1）免密码登录
+
+<b>步骤</b>
+
+* 配置公钥
+  * 执行`ssh-keygen`即可生成SSH钥匙，一路回车即可
+* 上传公钥到服务器
+  * 执行`ssh-copy-id -p port user@remote`，可以让远程服务器记住我们的公钥 
+
+> <b>免密码登录原理</b>
+>
+> * `ssh-keygen`可以在客户端生成`id_rsa.pub`的公钥和`id_rsa`的私钥
+> * `ssh-copy-id`可以将公钥复制给服务器
+> * 本地客户端使用私钥对数据进行加密/解密
+> * 远程服务器使用公钥对数据进行加密/解密
+>
+> <b>非对称加密算法</b>
+>
+> * 使用公钥加密的数据，需要使用私钥解密
+> * 使用私钥加密的数据，需要使用公钥解密
+
+#### 2）配置别名
+
+每次输入`ssh -p port user@remote`，时间久了会觉得麻烦，特别是当`user`、`remote`和`port`都得输入，而且还不好记忆
+
+而<b>配置别名</b>可以让我们进一步偷懒，比如用`ssh mac`来代替上面这么一长串，那么就在`~/.ssh/config`(需要创建)里面追加以下内容：
+
+```
+Host 别名
+	HostName IP地址
+	User hanoch
+	Port 22
+```
+
+<b>保存之后，即可使用`ssh mac`实现远程登录和使用`scp -r ~/Desktop mac:~/Desktop/demo`复制文件了</b>
