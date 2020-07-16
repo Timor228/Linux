@@ -7,7 +7,6 @@
  - /boot：放置Linux系统启动时用到的一些文件，如Linux的内核文件：`/boot/vmlinuz`，系统引导管理器：`/bootgrub`
  - /dev：存放Linux系统下的设备文件，访问该目录下某个文件，相当于访问某个设备，常用的是挂载光驱`mount /dev/cdrom/mnt`
  - <u>/etc：系统配置文件存放的目录，不建议在此目录下存放可执行文件，重要的配置文件有</u>
-    - /etc/inittab
    - /etc/inittab
    - /etc/fstab
    - /etc/init.d
