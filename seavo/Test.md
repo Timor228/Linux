@@ -24,7 +24,7 @@
 
 > | 序号 | 品牌       | 官网                                                    | 百度百科                                                     |
 > | ---- | ---------- | ------------------------------------------------------- | ------------------------------------------------------------ |
-> | 1    | ASUS       | <a href="www.asus.com.cn">华硕</a>                      | <a href="https://baike.baidu.com/item/华硕电脑股份有限公司">华硕</a> |
+> | 1    | ASUS       | <a href="https://www.asus.com.cn">华硕</a>              | <a href="https://baike.baidu.com/item/华硕电脑股份有限公司">华硕</a> |
 > | 2    | Gagabytes  | <a href ="https://www.gigabyte.cn/">技嘉科技</a>        | <a href="https://baike.baidu.com/item/技嘉">技嘉科技</a>     |
 > | 3    | Advantech  | <a href="https://www.advantech.com.cn/">研华科技</a>    | <a href="https://baike.baidu.com/item/研华">研华科技</a>     |
 > | 4    | ADLINK     | <a href="https://www.adlinktech.com/cn/">凌华科技</a>   | <a href="https://baike.baidu.com/item/凌华科技有限公司">凌华科技</a> |
